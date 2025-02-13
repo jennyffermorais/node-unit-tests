@@ -1,4 +1,6 @@
-# API Livraria
+# 🎯 Repository for unit testing practice
+
+## API Livraria
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN)
 
@@ -55,12 +57,12 @@ Este projeto já conta com o código necessário para subir a API em um servidor
 
 Este projeto utiliza o SQLite como gerenciador de banco de dados SQL. O SQLite utiliza um arquivo, normalmente de extensão `.sqlite` ou `.db`, para guardar os dados.
 
-O projeto já conta com uma base de dados configurada e populada com alguns dados iniciais, localizado na pasta `src/db/livraria.sqlite`. Para utilizar estes dados é necessário ter os drivers do SQLite instalados localmente no computador; você pode seguir os passos abaixo para instalar e acessar os dados: 
+O projeto já conta com uma base de dados configurada e populada com alguns dados iniciais, localizado na pasta `src/db/livraria.sqlite`. Para utilizar estes dados é necessário ter os drivers do SQLite instalados localmente no computador; você pode seguir os passos abaixo para instalar e acessar os dados:
 
 * Instalar o `sqlite` globalmente no computador:
   `sudo apt update`
   `sudo apt install sqlite3`
-  
+
 * Verifique a instalação com:
   `sqlite3 --version`
 
@@ -71,17 +73,17 @@ O projeto já conta com uma base de dados configurada e populada com alguns dado
   Enter ".help" for usage hints.
   sqlite>
   ```
-  
+
   ### Instalação dos drivers do SQLite (Linux Debian/Ubuntu)
 
 Este projeto utiliza o SQLite como gerenciador de banco de dados SQL. O SQLite utiliza um arquivo, normalmente de extensão `.sqlite` ou `.db`, para guardar os dados.
 
-O projeto já conta com uma base de dados configurada e populada com alguns dados iniciais, localizado na pasta `src/db/livraria.sqlite`. Para utilizar estes dados é necessário ter os drivers do SQLite instalados localmente no computador; você pode seguir os passos abaixo para instalar e acessar os dados: 
+O projeto já conta com uma base de dados configurada e populada com alguns dados iniciais, localizado na pasta `src/db/livraria.sqlite`. Para utilizar estes dados é necessário ter os drivers do SQLite instalados localmente no computador; você pode seguir os passos abaixo para instalar e acessar os dados:
 
 * Instalar o `sqlite` globalmente no computador:
   `sudo apt update`
   `sudo apt install sqlite3`
-  
+
 
 ### Instalação dos drivers do SQLite (Windows)
 * Faça o download dos drivers SQLite na página: https://www.sqlite.org/download.html
@@ -92,10 +94,10 @@ O projeto já conta com uma base de dados configurada e populada com alguns dado
 
 * Insira os arquivos SQLite descompactados na pasta C:\sqlite3 (você deverá extrair os arquivos para a pasta C:\sqlite3)
 * Para permitir que a CLI do SQLite3 possa ser utilizada em diferentes locais, precisamos adicionar uma variável de ambiente ao windows. Siga os passos:
-				
+
 	 * Abra "Exibir configurações avançadas do Sistema" (Advanced System Properties). Painel de controle (Control Panel) > Sistema (System) > Configurações avançadas do Sistema (Advanced System Settings).
 	* Selecione "Variáveis de Ambiente"
-	* Em variáveis de sistema, selecione a variável PATH e clique em **Editar..** 
+	* Em variáveis de sistema, selecione a variável PATH e clique em **Editar..**
 	* **Adicione C:\sqlite3 ao final** e selecione a opção ok
 
 [![Add sqlite3 to Windows PATH Variable ](https://storage.googleapis.com/static.configserverfirewall.com/images/windows10/sqlite3/sqlite3path.png)](https://storage.googleapis.com/static.configserverfirewall.com/images/windows10/sqlite3/sqlite3path.png)
@@ -135,13 +137,13 @@ Depois execute o cmd como administrador e rode o comando ```sqlite3```
 
 Você pode utilizar o CLI do SQLite para fazer consultas ao banco e conferir se os dados iniciais estão retornando.
 
-* Utilize o cli do SQLite para acessar o arquivo `src/db/livraria.sqlite`: 
+* Utilize o cli do SQLite para acessar o arquivo `src/db/livraria.sqlite`:
   `sqlite3 ./src/db/livraria.sqlite`
 
 * Digite `.tables` para exibir as tabelas já criadas no banco:
   ```
   sqlite> .tables
-  autores   editoras  livros 
+  autores   editoras  livros
   ```
 
 * Digite `SELECT * FROM autores;` para exibir o conteúdo da tabela `autores`:
@@ -150,7 +152,7 @@ Você pode utilizar o CLI do SQLite para fazer consultas ao banco e conferir se 
   1|JRR Tolkien|sul-africano|2022-06-06 19:30:55
   2|Ursula LeGuin|estadunidense|2022-06-06 19:30:55
   3|Machado de Assis|brasileira|2022-06-06 19:30:55
-  sqlite> 
+  sqlite>
   ```
 
 * Você pode testar os comandos `SELECT * FROM livros;` e `SELECT * FROM editoras;` para conferir os dados destas tabelas que já deixamos prontos para serem usados na API.
